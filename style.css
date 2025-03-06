@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Főoldal */
+.bankilogo {
+    display: block;
+    margin: 10px auto;
+    width: 275px;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.text {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    background-image: linear-gradient(120deg,rgb(253, 53, 53), orange, yellow, rgb(0, 240, 0), rgb(0, 217, 255), rgb(66, 132, 255), rgb(142, 0, 243), violet);
+    animation: rainbow 30s infinite;
+    background-size: 500% 100%;
+}
+
+@keyframes rainbow {
+    0%{background-position: 0%;}
+    50%{background-position: 100%;}
+    100%{background-position: 0%;}
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 150px repeat(4, 1fr);
+    grid-template-rows: 30px repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    font-size: 25px;
+    border-radius: 10px;
+    font-weight: 700;
+    color: black;
+    width: 350px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.grid-item:hover {
+    background-color: rgb(215, 215, 215);
+    box-shadow: 3px 5px 7px black;
+}
+
+.grid-text {
+    font-size: 21px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.padding-top-10 {
+    padding-top: 10px;
+}
+
+.grid-text {
+    cursor: auto;
+}
+
+.grid-bg {
+    background-color: rgb(250, 250, 250);
+}
+
+.grid-span2 {
+    grid-column: span 2;
+}
+
+footer {
+    padding: 5px 0;
+    font-size: 20px;
+    text-align: center;
+    background-color: grey;
+    color: white;
+}
+
+/* Tantárgyak */
+.back-button {
+    position: fixed;
+    margin-top: 5px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+.subject-name {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.reflection-title {
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+
+.reflection-text {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.image-container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    border-top: 1px solid black;
+}
+
+.flex-column {
+    flex: 25%;
+    margin: 0 5px;
+}
+
+.flex-column img {
+    vertical-align: middle;
+    width: 100%;
+    margin: 5px 0;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.flex-column img:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40, 40, 40, 0.95);
+    display: none;
+    overflow: auto;
+    text-align: center;
+}
+
+.modal img {
+    margin: 10px auto;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
